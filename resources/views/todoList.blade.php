@@ -4,28 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App template</title>
+    <title>Todo App</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-[#121212] text-white">
-    <div id="head" class="flex border-[#432AF7] border-t-2">
+    <div id="head" class="flex border-[#432AF7] border-t-4 shadow-md">
         <div class="w-full">
-            <header class="flex bg-[#1E1E1F] justify-between h-20 border-b border-gray-700 items-center px-6">
-                <div id="left-header" class="">
+            <header class="flex bg-[#1E1E1F] justify-between h-16 items-center px-8">
+                <div id="left-header" class="flex items-center">
+                    <h1 class="text-xl font-bold text-white">LivewireTodo App</h1>
                 </div>
-                <div id="right-header" class="text-white hover:text-gray-300 space-x-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-7 h-7">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
+                <div id="right-header" class="flex items-center space-x-4">
+                    <div class="relative">
+                        <img src="{{ asset('assets/imgs/Livewire.png') }}" class="w-10 h-10">
+                    </div>
                 </div>
             </header>
         </div>
     </div>
-    <div id="content" class="mx-auto" style="max-width:500px;">
+    <div id="content" class="mx-auto py-8" style="max-width: 600px;">
         @livewire('todo-list')
     </div>
 </body>

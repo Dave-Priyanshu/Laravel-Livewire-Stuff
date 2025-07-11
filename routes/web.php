@@ -11,6 +11,10 @@ Route::get('/test', function () {
     return view('test');
 });
 
+Route::get('/livewire',function(){
+    return view('livewireTUT');
+})->name('livewireTUT');
+
 Route::middleware('auth')->group(function(){
     Route::get('/dashboard',[AuthController::class,'dashboard'])->name('dashboard');
     Route::post('/logout',[AuthController::class,'logout'])->name('logout');

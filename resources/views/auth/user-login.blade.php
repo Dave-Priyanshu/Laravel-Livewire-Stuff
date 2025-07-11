@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="{{asset('assets/css/auth.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+    @include('partial.header')
     <h1>Login Form</h1>
 
     <form action="{{route('user.login')}}" method="POST">

@@ -9,6 +9,8 @@
 
 </head>
 <body>
+    {{-- header --}}
+    @include('partial.header')
     
     @livewire('clicker')
 </body>

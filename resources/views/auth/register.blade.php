@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registration</title>
     <link rel="stylesheet" href="{{asset('assets/css/auth.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+    {{-- header --}}
+    @include('partial.header')
     <h1>Registration Form</h1>
 
     <form action="{{route('register')}}" method="POST">

@@ -63,12 +63,17 @@
                         </li>
                         <li>
                             <a href="{{route('livewireTUT')}}" class="inline-block dark:bg-[#eeeeec] dark:border-[#eeeeec] dark:text-[#1C1C1A] dark:hover:bg-white dark:hover:border-white hover:bg-black hover:border-black px-5 py-1.5 bg-[#1b1b18] rounded-sm border border-black text-white text-sm leading-normal">
-                                Live wire
+                                Livewire Add user
                             </a>
                         </li>
                         <li>
                             <a href="{{route('livewire.todo')}}" class="inline-block dark:bg-[#eeeeec] dark:border-[#eeeeec] dark:text-[#1C1C1A] dark:hover:bg-white dark:hover:border-white hover:bg-black hover:border-black px-5 py-1.5 bg-[#1b1b18] rounded-sm border border-black text-white text-sm leading-normal">
                                 Livewire Todo
+                            </a>
+                        </li>
+                          <li>
+                            <a href="{{route('livewire.register')}}" class="inline-block dark:bg-[#eeeeec] dark:border-[#eeeeec] dark:text-[#1C1C1A] dark:hover:bg-white dark:hover:border-white hover:bg-black hover:border-black px-5 py-1.5 bg-[#1b1b18] rounded-sm border border-black text-white text-sm leading-normal">
+                                Livewire Register
                             </a>
                         </li>
                     </ul>

@@ -6,18 +6,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-Route::get('/test', function () {
-    return view('test');
-});
+})->name('home');
 
 Route::get('/livewire',function(){
-    return view('livewireTUT');
+    return view('main.livewireTUT');
 })->name('livewireTUT');
 
 Route::get('/livewire/todo',function(){
-    return view('todoList');
+    return view('main.todoList');
 })->name('livewire.todo');
+
+Route::get('/livewire/register',function(){
+    return view('main.registerForm');
+})->name('livewire.register');
 
 Route::middleware('auth')->group(function(){
     Route::get('/dashboard',[AuthController::class,'dashboard'])->name('dashboard');

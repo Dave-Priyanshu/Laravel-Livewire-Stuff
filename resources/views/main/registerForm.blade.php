@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#121212] text-white">
+    {{-- header --}}
+    @include('partial.header')
+    @livewire('register-form')
+    @livewireScripts
+</body>
+</html>

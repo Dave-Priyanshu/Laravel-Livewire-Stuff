@@ -7,7 +7,8 @@
 
 <div style="display: flex; gap: 15px; justify-content: center; align-items: center;">
   <img src="https://laravel.com/img/logomark.min.svg" width="40" height="40" alt="Laravel Logo">
-  <img src="https://github.com/livewire/livewire/blob/main/art/logo.svg" width="40" height="40" alt="Livewire Logo">
+  <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/98f594ae-6e08-4134-a48d-10605af67853" />
+
 
 </div>
 

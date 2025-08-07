@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\User;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -23,6 +24,11 @@ class RegisterForm extends Component
     #[Rule('nullable|sometimes|image|max:1024')]
     public $image;
 
+    #[On('todo-created')]
+    public function todoList($todo = null){
+        
+    }
+
     public function create(){
         
         $validate = $this->validate();
@@ -32,9 +38,11 @@ class RegisterForm extends Component
             $validate['image'] = $this->image->store('uploads','public');
         }
 
-        User::create($validate);
+        $user = User::create($validate);
         $this->reset(['name','email','password','image']);
         session()->flash('success','user created successfully!');
+
+        $this->dispatch('user-created',$user);
     }
     public function render()
     {

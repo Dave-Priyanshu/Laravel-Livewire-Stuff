@@ -9,6 +9,7 @@
             <a href="{{ route('livewire.register') }}" class="hover:underline text-white">Todo Register</a>
         </nav>
 
+
         <!-- Right: Logo -->
         <div class="flex items-center space-x-2">
             <img src="{{ asset('assets/imgs/Livewire.png') }}" alt="Logo" class="w-10 h-10 rounded-full" />

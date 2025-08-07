@@ -1,12 +1,19 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RazorpayController;
 use App\Http\Controllers\UserProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+// Razorpay
+Route::get('/razorpay',[RazorpayController::class,'showPaymentForm'])->name('razorpay.form');
+Route::post('/razorpay/initiate',[RazorpayController::class,'initiatePayment'])->name('razorpay.initiate');
+Route::post('/razorpay/verify', [RazorpayController::class, 'verifyPayment'])->name('razorpay.verify');
+Route::get('/razorpay/success', [RazorpayController::class, 'paymentSuccess'])->name('razorpay.success');
 
 Route::get('/livewire',function(){
     return view('main.livewireTUT');

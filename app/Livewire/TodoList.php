@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Todo;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -24,7 +25,7 @@ class TodoList extends Component
         $validated = $this->validateOnly('name');
 
         // create todo
-        Todo::create($validated);
+        $todo = Todo::create($validated);
 
         // clear input
         $this->reset('name');
@@ -33,6 +34,8 @@ class TodoList extends Component
         session()->flash('success','Todo created successfully.');
 
         $this->resetPage();
+
+        $this->dispatch('todo-created',$todo);
     }
     public function delete($todoID){
         try{
@@ -75,6 +78,7 @@ class TodoList extends Component
         session()->flash('success','Todo updated successfully.');
     }
 
+    #[On('todo-created')]
     public function render()
     {
         return view('livewire.todo-list',[
